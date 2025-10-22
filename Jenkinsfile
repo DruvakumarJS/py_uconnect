@@ -19,7 +19,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git(
-                    url: 'https://github.com/DruvakumarJS/py_csr_CI_CD.git',
+                    url: 'https://github.com/DruvakumarJS/py_uconnect.git',
                     branch: 'master', // Use exact branch from your repo
                     credentialsId: ''  // Fill in if your repo is private
                 )
