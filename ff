@@ -1,0 +1,16 @@
+import requests
+import random
+import json
+import string
+
+#base_url
+base_url="https://uc3.netiapps.net/login"
+credentials = {
+            "username": "DUM39995",
+            "password": "123456789"
+        }
+
+response = requests.post(base_url, json=credentials)
+response_data = response.json()
+auth_token = response_data.get("access_token")  # Or similar key
+print(f"Authentication Token: {auth_token}")
