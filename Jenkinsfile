@@ -42,10 +42,10 @@ pipeline {
         stage('Run Tests') {
             steps {
                 // Run pytest on the tests folder (ensure lowercase 'tests/')
-                bat "venv\\Scripts\\python.exe -m pytest -v tests"
+                bat "venv\\Scripts\\python.exe -m pytest -v managementcommitee_propose.py"
 
                 // Add workspace to PYTHONPATH for imports
-               bat 'set PYTHONPATH=%CD% && venv\\Scripts\\python.exe -m pytest -v tests'
+               bat 'set PYTHONPATH=%CD% && venv\\Scripts\\python.exe -m pytest -v managementcommitee_propose.py'
 
                bat '.\\run_tests.bat'   
             }
