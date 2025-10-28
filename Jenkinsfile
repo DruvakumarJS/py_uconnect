@@ -55,7 +55,7 @@ pipeline {
             steps {
                 // Example: archive pytest XML reports if generated
                 //junit '**/test-reports/*.xml'
-                junit 'reports/results.xml'
+               // junit 'reports/results.xml'
                 publishHTML([
                     allowMissing: true,
                     alwaysLinkToLastBuild: true,
